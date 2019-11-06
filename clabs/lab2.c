@@ -5,13 +5,13 @@
 int main(void)
 {
 float a,x,g,f,y;
-int bukva;
+int word;
 printf("Введите х ");
 scanf("%f", &x);
 printf("Введите a ");
 scanf("%f", &a);
-scanf("%i",&bukva);
-switch(bukva)
+scanf("%i",&word);
+switch(word)
 {
     case 1:
         g = 9*(7*a*a-19*a*x+10*x*x)/(25*a*a+30*a*x+9*x*x);
