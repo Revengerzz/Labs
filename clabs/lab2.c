@@ -6,11 +6,16 @@ int main(void)
 {
 float a,x,g,f,y;
 int word;
+printf("Введите числа, не равные нулю\n");
 printf("Введите х ");
 scanf("%f", &x);
 printf("Введите a ");
 scanf("%f", &a);
+printf("1 - вычислить функцию G, 2 - вычислить функцию F, 3 - вычислить функцию Y:");
 scanf("%i",&word);
+if ((a == 0) && (x == 0)){
+    printf("Всё плохо\n");}
+else {
 switch(word)
 {
     case 1:
@@ -28,6 +33,6 @@ switch(word)
     default:
         printf("неправильный ввод.\n");
 }
-
+}
 }
 
