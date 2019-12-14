@@ -1,8 +1,9 @@
 import math
 x = float(input('Введите значение х: '))
 a = float(input('Введите значение а: '))
-l = int(input("Введите сколько считать:"))
-s = float(input("Введите шаг:"))
+l = int(input('Введите сколько считать:'))
+s = float(input('Введите шаг:'))
+temp = float(input('Введите шаблон: '))
 w = int(input('1 - вычислить функцию G, 2 - вычислить функцию F, 3 - вычислить функцию Y: '))
 xlist = []
 alist = []
@@ -37,6 +38,7 @@ elif w == 3:
     for i in range(l):
         if (-80*a**2-46*a*x+21*x**2+1 <= 0):
             print('ERROR')
+
         else:
             Y = math.log(-80*a**2-46*a*x+21*x**2+1)/math.log(10)
             print('Y = ' + str(Y))
@@ -48,8 +50,8 @@ elif w == 3:
 else:
     print('ERROR')
 
-op = str(input('Способ вывода? (таблица/строка): '))
 
+op = str(input('Способ вывода? (таблица/строка): '))
 if op == 'строка':
     if w == 1:
         print(glist)
@@ -83,4 +85,13 @@ elif op == 'таблица':
 
             i += 1
             q += 1
-
+else:
+    print('ERROR')
+if w == 1:
+    print('Количество совпадений с шаблоном: ' + str(glist.count(temp)))
+elif w == 2:
+    print('Количество совпадений с шаблоном: ' + str(flist.count(temp)))
+elif w == 3:
+    print('Количество совпадений с шаблоном: ' + str(ylist.count(temp)))
+else:
+    print('ERROR')
